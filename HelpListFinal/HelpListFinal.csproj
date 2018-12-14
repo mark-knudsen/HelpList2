@@ -119,7 +119,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\ClassObject.cs" />
+    <Compile Include="Model\HelpListSingleton.cs" />
+    <Compile Include="Model\ProblemObject.cs" />
+    <Compile Include="Model\StudentObject.cs" />
+    <Compile Include="Model\TeacherObject.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="ViewModel\ClassCollection.cs" />
+    <Compile Include="ViewModel\ProblemCollector.cs" />
+    <Compile Include="View\HomePageAdmin.xaml.cs">
+      <DependentUpon>HomePageAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +157,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="View\HomePageAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -155,6 +171,7 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
